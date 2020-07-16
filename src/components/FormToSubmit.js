@@ -21,7 +21,7 @@ function FormToSubmit(props) {
       ) : (
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group controlId="username">
-            <Form.Label as="legend" sm={2}>
+            <Form.Label as="legend" sm={2} className="form">
               Last.FM Username
             </Form.Label>
             <Form.Control
@@ -32,7 +32,7 @@ function FormToSubmit(props) {
             />
           </Form.Group>
           <Form.Group>
-            <Form.Label as="legend" sm={2}>
+            <Form.Label as="legend" sm={2} className="form">
               Playlist Name
             </Form.Label>
             <Form.Control
@@ -43,7 +43,7 @@ function FormToSubmit(props) {
           </Form.Group>
           <fieldset>
             <Form.Group>
-              <Form.Label as="legend" sm={2}>
+              <Form.Label as="legend" sm={2} className="form">
                 Choose Period
               </Form.Label>
               <Col sm={10}>
@@ -99,7 +99,7 @@ function FormToSubmit(props) {
             </Form.Group>
           </fieldset>
 
-          <Button variant="primary" type="submit">
+          <Button variant="success" className="btn-green2" type="submit">
             Submit
           </Button>
         </Form>

@@ -1,31 +1,32 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { Container, Row } from "react-bootstrap";
 import SpotifyContainer from "./SpotifyContainer";
+import { Animated } from "react-animated-css";
 
 require("dotenv").config();
 const App = () => {
   return (
     <div className="body">
-      <Container className="md-container">
-        <Helmet
-          title="Spotify.FM Playlists"
-          meta={[{ property: "og:title", content: "Home" }]}
-        >
-          <style>{"body { background-color: #2f3542; }"}</style>
-        </Helmet>
+      <Animated animationIn="fadeIn" isVisible={true}>
+        <Container className="md-container">
+          <Container className="header">
+            <h1>Spotify.FM Playlists</h1>
+          </Container>
 
-        <Container className="header">
-          <h1>Welcome to Spotify.FM Playlists!</h1>
-          <p>A Spotify account and Last.FM account are required.</p>
-        </Container>
+          <Container className="sub-header">
+            <h6>
+              Create Spotify playlists with your Last.FM top tracks data. A
+              Spotify and Last.FM account are both required.
+            </h6>
+          </Container>
 
-        <Container className="smaller-container">
-          <Row className="justify-content-center">
-            <SpotifyContainer />
-          </Row>
+          <Container className="smaller-container">
+            <Row className="justify-content-center">
+              <SpotifyContainer />
+            </Row>
+          </Container>
         </Container>
-      </Container>
+      </Animated>
     </div>
   );
 };

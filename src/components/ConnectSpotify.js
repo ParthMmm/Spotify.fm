@@ -8,13 +8,14 @@ class ConnectSpotify extends Component {
     return (
       <div className="ConnectSpotify">
         <a href={SpotifyFunctions.redirectUrlToSpotifyForLogin()}>
-          <Button variant="success">
+          <Button variant="success" className="btn-green">
             <img
+              className="btn-img"
               alt="spotify"
               src="https://img.icons8.com/material-rounded/24/000000/spotify.png"
-            />
+            />{" "}
             Spotify Login
-          </Button>{" "}
+          </Button>
         </a>
       </div>
     );

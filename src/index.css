@@ -1,5 +1,4 @@
 /* ensure all pages have Bootstrap CSS */
-@import "~bootstrap/dist/css/bootstrap.min.css";
 
 .body {
   display: flex;
@@ -12,7 +11,26 @@
 }
 
 .header {
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.sub-header {
+  padding-top: 5rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.form {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .smaller-container {
@@ -36,10 +54,24 @@
   display: flex;
   align-items: center;
   justify-content: center; */
-  border-top: 1px solid #ccc;
+  border-top: 2px solid #ccc;
 }
 
 .sml-logo {
   height: 1em;
   margin-left: 10px;
+}
+.btn-img {
+  padding-bottom: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.btn-green {
+  color: #fff;
+  background-color: #7abd00 !important;
+}
+.btn-green2 {
+  color: #fff;
+  background-color: #7abd00 !important;
+  margin-left: 3rem;
 }
