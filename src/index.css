@@ -3,11 +3,12 @@
 .body {
   display: flex;
   flex-direction: column;
+  height: 100px;
 }
 .md-container {
   max-width: 800px;
   padding-top: 2rem;
-  color: #ffffff;
+  color: black;
 }
 
 .header {
@@ -15,7 +16,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: black;
 }
 .sub-header {
   padding-top: 5rem;
@@ -23,7 +24,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  color: black;
 }
 
 .form {
@@ -36,7 +37,7 @@
 .smaller-container {
   max-width: 800px;
   padding-top: 2rem;
-  color: #ffffff;
+  color: #lack;
 }
 
 .sml-card {
