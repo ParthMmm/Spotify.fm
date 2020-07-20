@@ -91,14 +91,14 @@ function LastFmData({ username, period, playlistName }) {
           .then(
             function (data) {
               console.log(data);
-              playlist_id = data.uri;
+              playlist_id = data.id;
             },
             function (err) {
               console.error(err);
             }
           )
           .then(function () {
-            spotify.addTracksToPlaylist(playlist_id, spot_uri.uris).then(
+            spotify.addTracksToPlaylist(playlist_id, spot_uri).then(
               function (data) {
                 console.log(data);
               },
