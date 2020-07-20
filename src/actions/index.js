@@ -4,3 +4,10 @@ export const submitForm = (data) => {
     payload: data,
   };
 };
+
+export const userID = (text) => {
+  return {
+    type: "GET_USERID",
+    payload: text,
+  };
+};

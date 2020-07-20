@@ -13,7 +13,6 @@ function FormToSubmit(props) {
     dispatch(submitForm(data));
     setFormSubmitted(1);
   };
-  console.log(errors);
   return (
     <div>
       {formSubmitted ? (

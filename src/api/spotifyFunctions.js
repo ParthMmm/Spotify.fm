@@ -14,7 +14,8 @@ export function redirectUrlToSpotifyForLogin() {
     "?response_type=token" +
     "&client_id=" +
     CLIENT_ID +
-    (SCOPES ? "&scope=" + encodeURIComponent(SCOPES) : "") +
+    "&scopes=" +
+    SCOPES +
     "&redirect_uri=" +
     encodeURIComponent(REDIRECT_URI)
   );

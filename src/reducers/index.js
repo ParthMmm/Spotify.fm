@@ -7,6 +7,14 @@ const formReducer = (data = null, action) => {
   return data;
 };
 
+const userReducer = (text = "empty", action) => {
+  if (action.type === "GET_USERID") {
+    return action.payload;
+  }
+  return text;
+};
+
 export default combineReducers({
   data: formReducer,
+  text: userReducer,
 });
