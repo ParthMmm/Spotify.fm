@@ -36,6 +36,6 @@ REACT_APP_REDIRECT_URI = 'Your-Redirect-Uri'
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/ParthMmm/Spotify.fm/blob/master/LICENSE)
 
 
