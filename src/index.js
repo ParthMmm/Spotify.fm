@@ -6,7 +6,6 @@ import App from "./components/App";
 import reducers from "./reducers";
 import { Helmet } from "react-helmet";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
-import { gql } from "@apollo/client";
 
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,28 +17,13 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-// client
-//   .query({
-//     query: gql`
-//       query topTracks {
-//         topTracks(username: "parth_m", period: "1month") {
-//           name
-//           artist {
-//             name
-//           }
-//         }
-//       }
-//     `,
-//   })
-//   .then((result) => console.log(result.data.topTracks));
-
 ReactDOM.render(
   <Provider store={store}>
     <Helmet
-      title="Spotify.FM Playlists"
+      title="Spotify.fm Playlists"
       meta={[{ property: "og:title", content: "Home" }]}
     >
-      <style>{"body { background-color: gray; }"}</style>
+      <style>{"body { background-color: #121212; }"}</style>
     </Helmet>
     <ApolloProvider client={client}>
       <App />

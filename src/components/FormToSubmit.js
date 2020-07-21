@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { connect, useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 import { Button, Form, Col } from "react-bootstrap";
-import LastFmData from "../api/LastFmData";
+import PlaylistData from "../api/PlaylistData";
 import { submitForm } from "../actions";
 
 function FormToSubmit(props) {
@@ -13,15 +13,18 @@ function FormToSubmit(props) {
     dispatch(submitForm(data));
     setFormSubmitted(1);
   };
+  if (errors) {
+    console.log(errors);
+  }
   return (
-    <div>
+    <div className="md-container">
       {formSubmitted ? (
-        <LastFmData />
+        <PlaylistData />
       ) : (
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Form.Group controlId="username">
             <Form.Label as="legend" sm={2} className="form">
-              Last.FM Username
+              Last.fm Username
             </Form.Label>
             <Form.Control
               type="username"
@@ -45,7 +48,7 @@ function FormToSubmit(props) {
               <Form.Label as="legend" sm={2} className="form">
                 Choose Period
               </Form.Label>
-              <Col sm={10}>
+              <Col sm={10} className="text">
                 <Form.Check
                   type="radio"
                   label="7 days"
@@ -107,5 +110,4 @@ function FormToSubmit(props) {
   );
 }
 
-// connect({ username, playlistName, period}) => ({username, playlistName, period}), ;
 export default connect()(FormToSubmit);

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ConnectSpotify from "./ConnectSpotify";
 import * as SpotifyFunctions from "../api/spotifyFunctions.js";
 import FormToSubmit from "./FormToSubmit";
+import { Redirect } from "react-router-dom";
+import LandingPage from "./LandingPage";
 class SpotifyContainer extends Component {
   constructor(props) {
     super(props);
@@ -18,13 +20,18 @@ class SpotifyContainer extends Component {
     accessToken
       ? this.setState({ loggedInToSpotify: true, accessToken: accessToken })
       : this.setState({ loggedInToSpotify: false, accessToken: null });
-    // this.setState({ formSubmitted: this.props.formSubmitted() });
   }
 
   render() {
     return (
-      <div className="SpotifyContainer">
-        {!this.state.loggedInToSpotify ? <ConnectSpotify /> : <FormToSubmit />}
+      <div className="md-container">
+        <div className="SpotifyContainer">
+          {!this.state.loggedInToSpotify ? (
+            <Redirect to="/home" />
+          ) : (
+            <Redirect to="/form" />
+          )}
+        </div>
       </div>
     );
   }
