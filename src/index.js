@@ -13,7 +13,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducers, composeEnhancers(applyMiddleware()));
 
 const client = new ApolloClient({
-  uri: "https://spotify-fm.herokuapp.com/",
+  uri: "https://spotify-fm-graphql.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 

@@ -1,8 +1,10 @@
 import React from "react";
-import { Spinner } from "react-bootstrap";
+import { Spinner, Container } from "react-bootstrap";
 import { connect } from "react-redux";
 import { submitForm } from "../actions";
 import { gql, useQuery } from "@apollo/client";
+import { Animated } from "react-animated-css";
+
 import * as SpotifyFunctions from "./spotifyFunctions";
 import * as SpotifyWebApi from "spotify-web-api-js";
 import Alert from "../components/Alert";
@@ -98,13 +100,19 @@ function LastFmData({ username, period, playlistName }) {
   }
   return (
     <div>
-      <h3 className="header">Playlist Created!</h3>
-      <p>
-        Note: Sometimes songs may be missing or may be replaced with a remix.{" "}
-      </p>
+      <Animated animationIn="fadeIn" isVisible={true} animationInDelay={250}>
+        <Container className="header">
+          <h3 className="header">Playlist Created!</h3>
+        </Container>
+        <Container className="sub-sub-header">
+          <p>
+            Note: Sometimes songs may be missing or may be replaced with a
+            remix.{" "}
+          </p>
+        </Container>
+      </Animated>
     </div>
   );
-  // return <h1>serenity now</h1>;
 }
 
 const mapStateToProps = (state) => {
