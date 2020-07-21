@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-import { Animated } from "react-animated-css";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (

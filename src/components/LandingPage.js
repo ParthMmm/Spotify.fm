@@ -1,14 +1,12 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import SpotifyContainer from "./SpotifyContainer";
 import { Animated } from "react-animated-css";
-import { Redirect, Link } from "react-router-dom";
 import ConnectSpotify from "./ConnectSpotify";
 
 export default function LandingPage() {
   return (
     <div className="body">
-      <Animated animationIn="fadeIn" isVisible={true}>
+      <Animated animationIn="fadeIn" isVisible={true} animationInDelay={250}>
         <Container className="md-container">
           <Container className="header">
             <h1 className="header">Spotify.fm Playlists</h1>

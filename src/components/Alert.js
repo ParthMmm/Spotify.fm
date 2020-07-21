@@ -1,22 +1,33 @@
 import React, { useState } from "react";
-import { Alert, Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
-function AlertDismissibleExample() {
+function AlertDismissibleExample(props) {
   const [show, setShow] = useState(true);
 
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/home");
+  }
   if (show) {
     return (
-      <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-        <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
-        <p>
-          Change this and that and try again. Duis mollis, est non commodo
-          luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-          Cras mattis consectetur purus sit amet fermentum.
-        </p>
+      <Alert
+        variant="danger"
+        onClose={() => setShow(false)}
+        onClick={handleClick}
+        dismissible
+      >
+        <Alert.Heading>
+          <span role="img" aria-label="shock">
+            😮{" "}
+          </span>
+          Oh no! You got an error!
+        </Alert.Heading>
+        <p>Make sure you entered your Last.fm username correctly.</p>
       </Alert>
     );
   }
-  return <Button onClick={() => setShow(true)}>Show Alert</Button>;
 }
 
 export default AlertDismissibleExample;

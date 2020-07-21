@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import ConnectSpotify from "./ConnectSpotify";
 import * as SpotifyFunctions from "../api/spotifyFunctions.js";
-import FormToSubmit from "./FormToSubmit";
 import { Redirect } from "react-router-dom";
-import LandingPage from "./LandingPage";
 class SpotifyContainer extends Component {
   constructor(props) {
     super(props);
