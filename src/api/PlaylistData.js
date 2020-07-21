@@ -47,9 +47,7 @@ function LastFmData({ username, period, playlistName }) {
 
   if (!loading && !error) {
     const songs = data.topTracks.map(
-      (song, index) =>
-        // (song.name + " " + song.artist.name).replace(/\s/g, "%20")
-        song.name + " " + song.artist.name
+      (song, index) => song.name + " " + song.artist.name
     );
     spotify.setAccessToken(SpotifyFunctions.checkUrlForSpotifyAccessToken());
     songs.forEach((s) =>

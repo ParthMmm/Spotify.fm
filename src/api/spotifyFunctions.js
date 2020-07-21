@@ -1,20 +1,16 @@
-// import Spotify from "spotify-web-api-js";
-// import uniq from "lodash.uniq";
-// import flatten from "lodash.flatten";
-// import chunk from "lodash.chunk";
 require("dotenv").config();
 
 export function redirectUrlToSpotifyForLogin() {
   const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
   const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI;
-  const SCOPES = process.env.REACT_APP_SCOPES;
+  const SCOPES = "playlist-modify-private playlist-modify-public";
 
   return (
     "https://accounts.spotify.com/authorize" +
     "?response_type=token" +
     "&client_id=" +
     CLIENT_ID +
-    "&scopes=" +
+    "&scope=" +
     SCOPES +
     "&redirect_uri=" +
     encodeURIComponent(REDIRECT_URI)

@@ -7,11 +7,7 @@ const Header = () => {
     <Navbar className="color-nav" variant="dark" sticky="top">
       <Container>
         <Navbar.Brand>
-          <NavLink
-            to="/home/"
-            // activeStyle={{ color: "green" }}
-            style={{ color: "#7abd00" }}
-          >
+          <NavLink to="/home/" style={{ color: "#7abd00" }}>
             <i class="fa fa-spotify" aria-hidden="true"></i>.
             <i class="fa fa-lastfm-square" aria-hidden="true"></i>
           </NavLink>

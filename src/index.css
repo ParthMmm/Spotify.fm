@@ -5,15 +5,7 @@
   flex-direction: column;
   height: 100px;
 }
-/* .md-container {
-  max-width: 800px;
 
-  color: black;
-  margin: 0 auto;
-  padding: 0 auto;
-  justify-content: center;
-  align-items: center;
-} */
 .md-container {
   position: absolute;
   top: 50%;
@@ -68,14 +60,6 @@
 
 .cntr-footer {
   flex-shrink: 0;
-  /* height: 80px;
-  margin-top: 20px;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center; */
   border-top: 2px solid #ccc;
 }
 
